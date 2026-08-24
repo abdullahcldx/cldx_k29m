@@ -388,6 +388,9 @@ async function startSlideshow() {
    /* ============================================================
    SCENE 4 — Message (progressive reveal)
    ============================================================ */
+/* ============================================================
+   SCENE 4 — Message (progressive reveal)
+   ============================================================ */
 async function showMessage() {
   const container = qs("#message-text");
   container.innerHTML = "";
@@ -400,15 +403,15 @@ async function showMessage() {
     void p.offsetWidth;
     p.classList.add("show");
 
-    // 200ms per word with a 3.5-second minimum display time
+    // Balanced speed: 5s base + 160ms per word (~10–13 seconds total per paragraph)
     const wordCount = text.trim().split(/\s+/).length;
-    const readingTime = Math.max(3500, wordCount * 200);
+    const readingTime = 5000 + (wordCount * 160);
 
-    await delay(readingTime + CONFIG.message.revealDelay);
+    await delay(readingTime);
   }
 
-  // Hold before transitioning to Dua
-  await delay(CONFIG.message.holdAfter);
+  // Brief pause before transitioning to Dua
+  await delay(3500);
 }
 
 /* ============================================================
@@ -426,15 +429,15 @@ async function showDua() {
     void p.offsetWidth;
     p.classList.add("show");
 
-    // 200ms per word with a 3.5-second minimum display time
+    // Slightly higher base for calm reading (~11–14 seconds total per line)
     const wordCount = text.trim().split(/\s+/).length;
-    const readingTime = Math.max(3500, wordCount * 200);
+    const readingTime = 6000 + (wordCount * 170);
 
-    await delay(readingTime + CONFIG.dua.revealDelay);
+    await delay(readingTime);
   }
 
-  // Hold before transitioning to Finale
-  await delay(CONFIG.dua.holdAfter);
+  // Quiet pause after complete dua
+  await delay(4500);
 }
 
 /* ============================================================
