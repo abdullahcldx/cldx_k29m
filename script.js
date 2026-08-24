@@ -24,6 +24,7 @@ const CONFIG = {
      Add / remove / reorder photos here. `duration` is how long
      that photo stays on screen (ms). `caption` is optional —
      leave it as "" for no caption. Put files in /images/. */
+ /* ---- SCENE 3: photo slideshow ----------------------------- */
   photos: [
     { src: "images/photo01.jpg", caption: "The day it all began…",         duration: 4200 },
     { src: "images/photo02.jpg", caption: "A moment I never want to forget", duration: 4200 },
@@ -328,11 +329,11 @@ async function startSlideshow() {
   const slideEls = CONFIG.photos.map((photo, i) => {
     const div = document.createElement("div");
     div.className = "slide" + (i % 2 === 1 ? " zoom-out" : "");
+    
     const img = document.createElement("img");
     img.src = photo.src;
     img.alt = photo.caption || `Photo ${i + 1}`;
-    img.loading = "eager";
-    img.onerror = () => { div.style.background = "linear-gradient(135deg, var(--bg-plum), var(--bg-plum-2))"; };
+    
     div.appendChild(img);
     stage.appendChild(div);
     return div;
@@ -340,7 +341,15 @@ async function startSlideshow() {
 
   for (let i = 0; i < CONFIG.photos.length; i++) {
     const photo = CONFIG.photos[i];
-    slideEls.forEach((el, idx) => el.classList.toggle("active", idx === i));
+    
+    slideEls.forEach((el, idx) => {
+      if (idx === i) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+
     if (caption) caption.textContent = photo.caption || "";
 
     const dotFill = dots[i];
