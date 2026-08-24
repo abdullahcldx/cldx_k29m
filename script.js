@@ -385,55 +385,57 @@ async function startSlideshow() {
 /* ============================================================
    SCENE 4 — Message (progressive reveal)
    ============================================================ */
-   async function showMessage() {
-    const container = qs("#message-text");
-    container.innerHTML = "";
-  
-    for (const text of CONFIG.message.paragraphs) {
-      const p = document.createElement("p");
-      p.textContent = text;
-      container.appendChild(p);
-  
-      void p.offsetWidth;
-      p.classList.add("show");
-  
-      // 90ms per word + custom reveal delay
-      const wordCount = text.trim().split(/\s+/).length;
-      const readingTime = Math.max(1200, wordCount * 90);
-  
-      await delay(readingTime + CONFIG.message.revealDelay);
-    }
-  
-    // Hold before transitioning to Dua
-    await delay(CONFIG.message.holdAfter);
-  }
-  
-  /* ============================================================
-     SCENE 5 — Dua (progressive reveal)
-     ============================================================ */
-  async function showDua() {
-    const container = qs("#dua-text");
-    container.innerHTML = "";
-  
-    for (const text of CONFIG.dua.lines) {
-      const p = document.createElement("p");
-      p.textContent = text;
-      container.appendChild(p);
-  
-      void p.offsetWidth;
-      p.classList.add("show");
-  
-      // 90ms per word + custom reveal delay
-      const wordCount = text.trim().split(/\s+/).length;
-      const readingTime = Math.max(1200, wordCount * 90);
-  
-      await delay(readingTime + CONFIG.dua.revealDelay);
-    }
-  
-    // Hold before transitioning to Finale
-    await delay(CONFIG.dua.holdAfter);
+   /* ============================================================
+   SCENE 4 — Message (progressive reveal)
+   ============================================================ */
+async function showMessage() {
+  const container = qs("#message-text");
+  container.innerHTML = "";
+
+  for (const text of CONFIG.message.paragraphs) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    container.appendChild(p);
+
+    void p.offsetWidth;
+    p.classList.add("show");
+
+    // 200ms per word with a 3.5-second minimum display time
+    const wordCount = text.trim().split(/\s+/).length;
+    const readingTime = Math.max(3500, wordCount * 200);
+
+    await delay(readingTime + CONFIG.message.revealDelay);
   }
 
+  // Hold before transitioning to Dua
+  await delay(CONFIG.message.holdAfter);
+}
+
+/* ============================================================
+   SCENE 5 — Dua (progressive reveal)
+   ============================================================ */
+async function showDua() {
+  const container = qs("#dua-text");
+  container.innerHTML = "";
+
+  for (const text of CONFIG.dua.lines) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    container.appendChild(p);
+
+    void p.offsetWidth;
+    p.classList.add("show");
+
+    // 200ms per word with a 3.5-second minimum display time
+    const wordCount = text.trim().split(/\s+/).length;
+    const readingTime = Math.max(3500, wordCount * 200);
+
+    await delay(readingTime + CONFIG.dua.revealDelay);
+  }
+
+  // Hold before transitioning to Finale
+  await delay(CONFIG.dua.holdAfter);
+}
 /* ============================================================
    SCENE 6 — Finale (restrained fireworks / confetti)
    ============================================================ */
