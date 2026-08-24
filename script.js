@@ -565,21 +565,30 @@ function showFinale() {
   
     const beginBtn = qs("#begin-btn");
   
-    beginBtn.addEventListener("click", () => {
+beginBtn.addEventListener("click", () => {
       beginBtn.disabled = true;
-  
+
+      // UNLOCK birthday audio silently so browser permits it later
+      birthdayAudio.play().then(() => {
+        birthdayAudio.pause();
+        birthdayAudio.currentTime = 0;
+        birthdayAudio.volume = 0.55;
+      }).catch((e) => console.warn("Birthday audio unlock catch:", e));
+
       // Start the hacking/intro music immediately
       introAudio.currentTime = 0;
       introAudio.volume = 0.75;
-  
+
       const playPromise = introAudio.play();
-  
+
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
           console.warn("Intro audio could not start:", error);
         });
       }
-  
+
+      runExperience();
+    }, { once: true });
       runExperience();
     }, { once: true });
   });
