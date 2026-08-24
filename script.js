@@ -25,60 +25,49 @@ const CONFIG = {
      that photo stays on screen (ms). `caption` is optional —
      leave it as "" for no caption. Put files in /images/. */
   photos: [
-    { src: "images/photo01.jpg", caption: "The day it all began…",         duration: 4200 },
-    { src: "images/photo02.jpg", caption: "A moment I never want to forget", duration: 4200 },
-    { src: "images/photo03.jpg", caption: "Your smile, my favorite view",   duration: 4200 },
-    { src: "images/photo04.jpg", caption: "My favorite notification will always be a picture from you. 📸💗", duration: 4200 },
-    { src: "images/photo05.jpg", caption: "You have no idea how effortlessly you steal my attention", duration: 4200 },
-    { src: "images/photo06.jpg", caption: "I want to pull you close, kiss your neck, and forget about the world for a while", duration: 4200 },
-    { src: "images/photo07.jpg", caption: "You are my favorite distraction and my deepest desire", duration: 4200 },
-    { src: "images/photo08.jpg", caption: "You make me smile in my problems", duration: 4200 },
-    { src: "images/photo09.jpg", caption: "You are a great blessing from Allah to me", duration: 4200 },
-    { src: "images/photo10.jpg", caption: "I love you soooo much", duration: 4200 },
+    { src: "images/photo01.JPG", caption: "The day it all began…",         duration: 4200 },
+    { src: "images/photo02.JPG", caption: "A moment I never want to forget", duration: 4200 },
+    { src: "images/photo03.JPG", caption: "Your smile, my favorite view",   duration: 4200 },
+    { src: "images/photo04.JPG", caption: "My favorite notification will always be a picture from you. 📸💗", duration: 4200 },
+    { src: "images/photo05.JPG", caption: "You have no idea how effortlessly you steal my attention", duration: 4200 },
+    { src: "images/photo06.JPG", caption: "I want to pull you close, kiss your neck, and forget about the world for a while", duration: 4200 },
+    { src: "images/photo07.JPG", caption: "You are my favorite distraction and my deepest desire", duration: 4200 },
+    { src: "images/photo08.JPG", caption: "You make me smile in my problems", duration: 4200 },
+    { src: "images/photo09.JPG", caption: "You are a great blessing from Allah to me", duration: 4200 },
+    { src: "images/photo10.JPG", caption: "I love you soooo much", duration: 4200 },
   ],
   slideTransitionDuration: 1200, // ms crossfade between photos
 
   /* ---- SCENE 4: birthday message ---------------------------
-     Placeholder only — replace with the real message later.
      Each array item becomes its own paragraph. */
-     message: {
-        paragraphs: [
-          "Umme Ruman, today is more than just another date on the calendar… it is the day someone truly special came into this world. 🎂✨ And somehow, knowing that you are here makes this day feel special to me too. ❤️",
-      
-          "Even though I can't be there beside you to celebrate your birthday, I hope these little moments on this screen can make you feel how much you mean to me. Distance may keep us apart for now, but it cannot stop me from remembering you, praying for you, and wishing the very best for you. 🌙💜",
-      
-          "On your birthday, I wish you a life filled with happiness that lasts, peace that stays in your heart, dreams that come true, and countless reasons to smile. May every difficult road become easier, every silent prayer find its way to an answer, and every new chapter of your life bring something beautiful. 🦋✨",
-      
-          "And perhaps, one day, In Sha Allah, this distance will only be a memory… and instead of wishing you through a screen, I'll be able to wish you right beside you. Until that day, keep smiling, keep shining, and always remember that somewhere, someone is genuinely praying for your happiness. ❤️🌙"
-        ],
-      
-        revealDelay: 400,
-        holdAfter: 2000,
-      },
+  message: {
+    paragraphs: [
+      "Umme Ruman, today is more than just another date on the calendar… it is the day someone truly special came into this world. 🎂✨ And somehow, knowing that you are here makes this day feel special to me too. ❤️",
+      "Even though I can't be there beside you to celebrate your birthday, I hope these little moments on this screen can make you feel how much you mean to me. Distance may keep us apart for now, but it cannot stop me from remembering you, praying for you, and wishing the very best for you. 🌙💜",
+      "On your birthday, I wish you a life filled with happiness that lasts, peace that stays in your heart, dreams that come true, and countless reasons to smile. May every difficult road become easier, every silent prayer find its way to an answer, and every new chapter of your life bring something beautiful. 🦋✨",
+      "And perhaps, one day, In Sha Allah, this distance will only be a memory… and instead of wishing you through a screen, I'll be able to wish you right beside you. Until that day, keep smiling, keep shining, and always remember that somewhere, someone is genuinely praying for your happiness. ❤️🌙"
+    ],
+    revealDelay: 400,
+    holdAfter: 2000,
+  },
 
-  /* ---- SCENE 5: Islamic dua ----------------------------------
-     Placeholder English dua text — replace with the final text later. */
-     dua: {
-        lines: [
-          "May your life always be surrounded by happiness, peace, and barakah. May Allah protect your heart, ease every worry you carry, and fill your days with countless beautiful moments. 🤍✨",
-      
-          "May your dreams come closer to reality, may every difficult path become easier for you, and may you always find reasons to smile. May Allah bless you with success, peace of mind, and a future more beautiful than you imagine. 🌙🦋",
-      
-          "May Allah keep you protected wherever life takes you, surround you with people who genuinely care for you, and guide every step you take toward what is best for you. May every sincere prayer you make find its way to a beautiful answer. 🤲🏻✨",
-      
-          "And if it is written in our destiny and is خير for both of us, may Allah make this distance temporary. May we meet one day, at the right time and in the right way, and may He make our journey toward a beautiful halal marriage easy, blessed, and full of happiness. ❤️🌙",
-      
-          "Until that day, may you keep smiling, keep shining, and keep believing that the most beautiful things are sometimes worth waiting for. May Allah write a beautiful future for you… and, if it is meant to be, a beautiful future for us together. Ameen. 🤍"
-        ],
-      
-        revealDelay: 500,
-        holdAfter: 2500,
-      },
+  /* ---- SCENE 5: Islamic dua ---------------------------------- */
+  dua: {
+    lines: [
+      "May your life always be surrounded by happiness, peace, and barakah. May Allah protect your heart, ease every worry you carry, and fill your days with countless beautiful moments. 🤍✨",
+      "May your dreams come closer to reality, may every difficult path become easier for you, and may you always find reasons to smile. May Allah bless you with success, peace of mind, and a future more beautiful than you imagine. 🌙🦋",
+      "May Allah keep you protected wherever life takes you, surround you with people who genuinely care for you, and guide every step you take toward what is best for you. May every sincere prayer you make find its way to a beautiful answer. 🤲🏻✨",
+      "And if it is written in our destiny and is خير for both of us, may Allah make this distance temporary. May we meet one day, at the right time and in the right way, and may He make our journey toward a beautiful halal marriage easy, blessed, and full of happiness. ❤️🌙",
+      "Until that day, may you keep smiling, keep shining, and keep believing that the most beautiful things are sometimes worth waiting for. May Allah write a beautiful future for you… and, if it is meant to be, a beautiful future for us together. Ameen. 🤍"
+    ],
+    revealDelay: 500,
+    holdAfter: 2500,
+  },
 
-  /* ---- Scene timings (ms) — adjust the overall pacing here ---- */
+  /* ---- Scene timings (ms) ---- */
   timings: {
-    terminalLineTypeSpeed: 22,   // ms per character while typing
-    terminalLinePause: 260,      // pause after each finished line
+    terminalLineTypeSpeed: 22,
+    terminalLinePause: 260,
     terminalProgressDuration: 1600,
     terminalEndHold: 900,
     revealHold: 3200,
@@ -90,68 +79,70 @@ const CONFIG = {
    Small utilities
    ============================================================ */
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-/* ============================================================
-   Audio
-   ============================================================ */
 
-   const introAudio = document.getElementById("intro-audio");
-   const birthdayAudio = document.getElementById("birthday-audio");
-   
-   introAudio.volume = 0.75;
-   birthdayAudio.volume = 0.55;
-   
-   function fadeOutAudio(audio, duration = 1000) {
-     return new Promise((resolve) => {
-       const startVolume = audio.volume;
-       const startTime = performance.now();
-   
-       function fade(currentTime) {
-         const elapsed = currentTime - startTime;
-         const progress = Math.min(elapsed / duration, 1);
-   
-         audio.volume = startVolume * (1 - progress);
-   
-         if (progress < 1) {
-           requestAnimationFrame(fade);
-         } else {
-           audio.pause();
-           audio.currentTime = 0;
-           audio.volume = startVolume;
-           resolve();
-         }
-       }
-   
-       requestAnimationFrame(fade);
-     });
-   }
-   
-   function fadeInAudio(audio, targetVolume = 0.55, duration = 1200) {
-     audio.volume = 0;
-     audio.currentTime = 0;
-   
-     const playPromise = audio.play();
-   
-     if (playPromise !== undefined) {
-       playPromise.catch((error) => {
-         console.warn("Audio could not start:", error);
-       });
-     }
-   
-     const startTime = performance.now();
-   
-     function fade(currentTime) {
-       const elapsed = currentTime - startTime;
-       const progress = Math.min(elapsed / duration, 1);
-   
-       audio.volume = targetVolume * progress;
-   
-       if (progress < 1) {
-         requestAnimationFrame(fade);
-       }
-     }
-   
-     requestAnimationFrame(fade);
-   }
+/* ============================================================
+   Audio Setup & Helpers
+   ============================================================ */
+const introAudio = document.getElementById("intro-audio");
+const birthdayAudio = document.getElementById("birthday-audio");
+
+if (introAudio) introAudio.volume = 0.75;
+if (birthdayAudio) birthdayAudio.volume = 0.55;
+
+function fadeOutAudio(audio, duration = 1000) {
+  return new Promise((resolve) => {
+    if (!audio) return resolve();
+    const startVolume = audio.volume;
+    const startTime = performance.now();
+
+    function fade(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      audio.volume = startVolume * (1 - progress);
+
+      if (progress < 1) {
+        requestAnimationFrame(fade);
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = startVolume;
+        resolve();
+      }
+    }
+
+    requestAnimationFrame(fade);
+  });
+}
+
+function fadeInAudio(audio, targetVolume = 0.55, duration = 1200) {
+  if (!audio) return;
+  audio.volume = 0;
+  audio.currentTime = 0;
+
+  const playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch((error) => {
+      console.warn("Audio could not start:", error);
+    });
+  }
+
+  const startTime = performance.now();
+
+  function fade(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    audio.volume = targetVolume * progress;
+
+    if (progress < 1) {
+      requestAnimationFrame(fade);
+    }
+  }
+
+  requestAnimationFrame(fade);
+}
 
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
@@ -177,11 +168,11 @@ async function transitionToScene(name, holdBefore = 0) {
 }
 
 /* ============================================================
-   Ambient particle field (canvas) — shared background across
-   every scene for a continuous, low-cost atmosphere.
+   Ambient particle field (canvas)
    ============================================================ */
 function initParticles() {
   const canvas = qs("#bg-canvas");
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
   let particles = [];
   let w, h;
@@ -234,7 +225,6 @@ function initParticles() {
   if (!prefersReducedMotion) {
     frame = requestAnimationFrame(tick);
   } else {
-    // Draw a single static frame and stop.
     tick(0);
     cancelAnimationFrame(frame);
   }
@@ -298,6 +288,7 @@ async function runProgressBar(container, duration) {
 
 async function runTerminal() {
   const container = qs("#terminal-text");
+  if (!container) return;
   container.textContent = "";
   const speed = CONFIG.timings.terminalLineTypeSpeed;
 
@@ -314,9 +305,8 @@ async function runTerminal() {
     if (line.pauseAfter) await delay(line.pauseAfter);
     else await delay(CONFIG.timings.terminalLinePause);
 
-    // Keep the terminal scrolled to the latest line.
     const body = qs("#terminal-body");
-    body.scrollTop = body.scrollHeight;
+    if (body) body.scrollTop = body.scrollHeight;
   }
 
   await delay(CONFIG.timings.terminalEndHold);
@@ -327,6 +317,7 @@ async function runTerminal() {
    ============================================================ */
 function buildSlideshowDots() {
   const wrap = qs("#slide-progress");
+  if (!wrap) return [];
   wrap.innerHTML = "";
   CONFIG.photos.forEach(() => {
     const dot = document.createElement("span");
@@ -339,11 +330,10 @@ function buildSlideshowDots() {
 async function startSlideshow() {
   const stage = qs("#slideshow-stage");
   const caption = qs("#slide-caption");
+  if (!stage) return;
   stage.innerHTML = "";
   const dots = buildSlideshowDots();
 
-  // Pre-build all slide elements (empty <img> until their turn,
-  // so a broken/missing photo just shows the dark background).
   const slideEls = CONFIG.photos.map((photo, i) => {
     const div = document.createElement("div");
     div.className = "slide" + (i % 2 === 1 ? " zoom-out" : "");
@@ -360,14 +350,12 @@ async function startSlideshow() {
   for (let i = 0; i < CONFIG.photos.length; i++) {
     const photo = CONFIG.photos[i];
     slideEls.forEach((el, idx) => el.classList.toggle("active", idx === i));
-    caption.textContent = photo.caption || "";
+    if (caption) caption.textContent = photo.caption || "";
 
-    // Animate this slide's progress dot filling up.
     const dotFill = dots[i];
     if (dotFill) {
       dotFill.style.transition = "none";
       dotFill.style.width = "0%";
-      // Force reflow so the transition below actually animates.
       void dotFill.offsetWidth;
       dotFill.style.transition = `width ${photo.duration}ms linear`;
       dotFill.style.width = "100%";
@@ -382,14 +370,9 @@ async function startSlideshow() {
 /* ============================================================
    SCENE 4 — Message (progressive reveal)
    ============================================================ */
-   /* ============================================================
-   SCENE 4 — Message (progressive reveal)
-   ============================================================ */
-/* ============================================================
-   SCENE 4 — Message (progressive reveal)
-   ============================================================ */
 async function showMessage() {
   const container = qs("#message-text");
+  if (!container) return;
   container.innerHTML = "";
 
   for (const text of CONFIG.message.paragraphs) {
@@ -400,14 +383,12 @@ async function showMessage() {
     void p.offsetWidth;
     p.classList.add("show");
 
-    // Balanced speed: 5s base + 160ms per word (~10–13 seconds total per paragraph)
     const wordCount = text.trim().split(/\s+/).length;
     const readingTime = 5000 + (wordCount * 160);
 
     await delay(readingTime);
   }
 
-  // Brief pause before transitioning to Dua
   await delay(3500);
 }
 
@@ -416,6 +397,7 @@ async function showMessage() {
    ============================================================ */
 async function showDua() {
   const container = qs("#dua-text");
+  if (!container) return;
   container.innerHTML = "";
 
   for (const text of CONFIG.dua.lines) {
@@ -426,22 +408,21 @@ async function showDua() {
     void p.offsetWidth;
     p.classList.add("show");
 
-    // Slightly higher base for calm reading (~11–14 seconds total per line)
     const wordCount = text.trim().split(/\s+/).length;
     const readingTime = 6000 + (wordCount * 170);
 
     await delay(readingTime);
   }
 
-  // Quiet pause after complete dua
   await delay(4500);
 }
 
 /* ============================================================
-   SCENE 6 — Finale (restrained fireworks / confetti)
+   SCENE 6 — Finale
    ============================================================ */
 function showFinale() {
   const canvas = qs("#finale-canvas");
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
   let w, h;
 
@@ -477,7 +458,6 @@ function showFinale() {
     points.forEach(([fx, fy], i) => {
       setTimeout(() => burst(w * fx, h * fy), i * 700);
     });
-    // Gentle repeat for a longer finale without being childish.
     setTimeout(scheduleBursts, points.length * 700 + 2600);
   }
 
@@ -487,7 +467,7 @@ function showFinale() {
     sparks.forEach((s) => {
       s.x += s.vx;
       s.y += s.vy;
-      s.vy += 0.02; // gentle gravity
+      s.vy += 0.02;
       s.life -= 0.012;
       ctx.beginPath();
       ctx.fillStyle = s.color;
@@ -508,81 +488,63 @@ function showFinale() {
 /* ============================================================
    Master sequence
    ============================================================ */
-   async function runExperience() {
-    // ==========================================
-    // INTRO — LOVE_OS + hacking music
-    // ==========================================
-  
-    await transitionToScene("terminal");
-    await runTerminal();
-  
-    // ==========================================
-    // ROMANTIC REVEAL
-    // ==========================================
-  
-    await transitionToScene("reveal");
-  
-    // Fade out hacking music
-    await fadeOutAudio(introAudio, 1000);
-  
-    // Start birthday romantic music
-    fadeInAudio(birthdayAudio, 0.55, 1200);
-  
-    await delay(CONFIG.timings.revealHold);
-  
-    // ==========================================
-    // SLIDESHOW
-    // ==========================================
-  
-    await transitionToScene("slideshow");
-    await startSlideshow();
-  
-    // ==========================================
-    // BIRTHDAY MESSAGE
-    // ==========================================
-  
-    await transitionToScene("message");
-    await showMessage();
-  
-    // ==========================================
-    // DUA
-    // ==========================================
-  
-    await transitionToScene("dua");
-    await showDua();
-  
-    // ==========================================
-    // FINALE
-    // ==========================================
-  
-    await transitionToScene("finale");
-    showFinale();
-  }
+async function runExperience() {
+  await transitionToScene("terminal");
+  await runTerminal();
+
+  await transitionToScene("reveal");
+
+  // Fade out hacking music & fade in romantic birthday music
+  await fadeOutAudio(introAudio, 1000);
+  fadeInAudio(birthdayAudio, 0.55, 1200);
+
+  await delay(CONFIG.timings.revealHold);
+
+  await transitionToScene("slideshow");
+  await startSlideshow();
+
+  await transitionToScene("message");
+  await showMessage();
+
+  await transitionToScene("dua");
+  await showDua();
+
+  await transitionToScene("finale");
+  showFinale();
+}
 
 /* ============================================================
    Boot
    ============================================================ */
-   document.addEventListener("DOMContentLoaded", () => {
-    initParticles();
-    showScene("opening");
-  
-    const beginBtn = qs("#begin-btn");
-  
+document.addEventListener("DOMContentLoaded", () => {
+  initParticles();
+  showScene("opening");
+
+  const beginBtn = qs("#begin-btn");
+
+  if (beginBtn) {
     beginBtn.addEventListener("click", () => {
       beginBtn.disabled = true;
-  
-      // Start the hacking/intro music immediately
-      introAudio.currentTime = 0;
-      introAudio.volume = 0.75;
-  
-      const playPromise = introAudio.play();
-  
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.warn("Intro audio could not start:", error);
-        });
+
+      // UNLOCK birthday audio silently so modern browsers allow play later
+      if (birthdayAudio) {
+        birthdayAudio.play().then(() => {
+          birthdayAudio.pause();
+          birthdayAudio.currentTime = 0;
+        }).catch((e) => console.warn("Birthday unlock error:", e));
       }
-  
+
+      // Start intro music
+      if (introAudio) {
+        introAudio.currentTime = 0;
+        introAudio.volume = 0.75;
+        const playPromise = introAudio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => console.warn("Intro audio start error:", error));
+        }
+      }
+
       runExperience();
     }, { once: true });
-  });
+  }
+});
