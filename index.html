@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>A Special Surprise For Umme Ruman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="intro-audio" preload="auto">
+    <source src="audio/intro.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="birthday-audio" preload="auto">
+    <source src="audio/birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Ambient particle canvas, sits behind every scene -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Signature glow ribbon that threads through the whole experience -->
+  <div class="ribbon-glow" aria-hidden="true"></div>
+
+  <main id="stage">
+
+    <!-- SCENE 0 — OPENING -->
+    <section class="scene" id="scene-opening" data-scene="opening">
+      <div class="scene-inner opening-inner">
+        <p class="eyebrow">A Special Surprise For You</p>
+        <h1 class="opening-title">For <span class="name-glow">Umme Ruman</span> <span class="heart">❤</span></h1>
+        <button id="begin-btn" class="begin-btn" type="button">
+          <span>Begin</span> <span class="heart">❤</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 1 — LOVE OS TERMINAL -->
+    <section class="scene" id="scene-terminal" data-scene="terminal">
+      <div class="scene-inner terminal-inner">
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="terminal-title">LOVE_OS — special_protocol.exe</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <pre id="terminal-text"></pre><span class="cursor" id="terminal-cursor">&#9608;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 2 — ROMANTIC REVEAL -->
+    <section class="scene" id="scene-reveal" data-scene="reveal">
+      <div class="scene-inner reveal-inner">
+        <h2 class="reveal-title" id="reveal-title">Happy Birthday, <span class="name-glow">Umme Ruman</span> <span class="heart">❤</span></h2>
+      </div>
+    </section>
+
+    <!-- SCENE 3 — PHOTO SLIDESHOW -->
+    <section class="scene" id="scene-slideshow" data-scene="slideshow">
+      <div class="scene-inner slideshow-inner">
+        <div class="slideshow-stage" id="slideshow-stage"></div>
+        <p class="slide-caption" id="slide-caption"></p>
+        <div class="slide-progress" id="slide-progress"></div>
+      </div>
+    </section>
+
+    <!-- SCENE 4 — BIRTHDAY MESSAGE -->
+    <section class="scene" id="scene-message" data-scene="message">
+      <div class="scene-inner message-inner">
+        <p class="eyebrow">A Little Something From My Heart</p>
+        <div class="message-text" id="message-text"></div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 — ISLAMIC DUA -->
+    <section class="scene" id="scene-dua" data-scene="dua">
+      <div class="scene-inner dua-inner">
+        <p class="eyebrow dua-eyebrow">A Prayer For You</p>
+        <div class="dua-text" id="dua-text"></div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 — FINALE -->
+    <section class="scene" id="scene-finale" data-scene="finale">
+      <canvas id="finale-canvas"></canvas>
+      <div class="scene-inner finale-inner">
+        <p class="finale-happy">HAPPY BIRTHDAY</p>
+        <h2 class="finale-name">UMME RUMAN <span class="heart">❤</span></h2>
+      </div>
+    </section>
+
+  </main>
+
+  <audio id="bg-audio" src="audio/jeene-laga-hoon.mp3" preload="none" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
