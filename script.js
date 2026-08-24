@@ -25,16 +25,16 @@ const CONFIG = {
      that photo stays on screen (ms). `caption` is optional —
      leave it as "" for no caption. Put files in /images/. */
   photos: [
-    { src: "images/photo01.JPG", caption: "The day it all began…",         duration: 4200 },
-    { src: "images/photo02.JPG", caption: "A moment I never want to forget", duration: 4200 },
-    { src: "images/photo03.JPG", caption: "Your smile, my favorite view",   duration: 4200 },
-    { src: "images/photo04.JPG", caption: "My favorite notification will always be a picture from you. 📸💗", duration: 4200 },
-    { src: "images/photo05.JPG", caption: "You have no idea how effortlessly you steal my attention", duration: 4200 },
-    { src: "images/photo06.JPG", caption: "I want to pull you close, kiss your neck, and forget about the world for a while", duration: 4200 },
-    { src: "images/photo07.JPG", caption: "You are my favorite distraction and my deepest desire", duration: 4200 },
-    { src: "images/photo08.JPG", caption: "You make me smile in my problems", duration: 4200 },
-    { src: "images/photo09.JPG", caption: "You are a great blessing from Allah to me", duration: 4200 },
-    { src: "images/photo10.JPG", caption: "I love you soooo much", duration: 4200 },
+    { src: "images/photo01.jpg", caption: "The day it all began…",         duration: 4200 },
+    { src: "images/photo02.jpg", caption: "A moment I never want to forget", duration: 4200 },
+    { src: "images/photo03.jpg", caption: "Your smile, my favorite view",   duration: 4200 },
+    { src: "images/photo04.jpg", caption: "My favorite notification will always be a picture from you. 📸💗", duration: 4200 },
+    { src: "images/photo05.jpg", caption: "You have no idea how effortlessly you steal my attention", duration: 4200 },
+    { src: "images/photo06.jpg", caption: "I want to pull you close, kiss your neck, and forget about the world for a while", duration: 4200 },
+    { src: "images/photo07.jpg", caption: "You are my favorite distraction and my deepest desire", duration: 4200 },
+    { src: "images/photo08.jpg", caption: "You make me smile in my problems", duration: 4200 },
+    { src: "images/photo09.jpg", caption: "You are a great blessing from Allah to me", duration: 4200 },
+    { src: "images/photo10.jpg", caption: "I love you soooo much", duration: 4200 },
   ],
   slideTransitionDuration: 1200, // ms crossfade between photos
 
