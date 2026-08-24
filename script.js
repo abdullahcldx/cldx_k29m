@@ -117,31 +117,22 @@ function fadeOutAudio(audio, duration = 1000) {
 
 function fadeInAudio(audio, targetVolume = 0.55, duration = 1200) {
   if (!audio) return;
-  audio.volume = 0;
+
+  // Unmute/reset volume and play immediately to bypass strict restrictions
   audio.currentTime = 0;
+  audio.volume = targetVolume;
 
   const playPromise = audio.play();
 
   if (playPromise !== undefined) {
     playPromise.catch((error) => {
-      console.warn("Audio could not start:", error);
+      console.warn("Audio play blocked by browser, trying user bypass:", error);
+      audio.muted = true;
+      audio.play().then(() => {
+        audio.muted = false;
+      }).catch((e) => console.error("Final play attempt failed:", e));
     });
   }
-
-  const startTime = performance.now();
-
-  function fade(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    audio.volume = targetVolume * progress;
-
-    if (progress < 1) {
-      requestAnimationFrame(fade);
-    }
-  }
-
-  requestAnimationFrame(fade);
 }
 
 const prefersReducedMotion = window.matchMedia(
@@ -494,9 +485,11 @@ async function runExperience() {
 
   await transitionToScene("reveal");
 
-  // Fade out hacking music & fade in romantic birthday music
-  await fadeOutAudio(introAudio, 1000);
+  // Play birthday music right away
   fadeInAudio(birthdayAudio, 0.55, 1200);
+
+  // Fade out intro audio concurrently
+  fadeOutAudio(introAudio, 1000);
 
   await delay(CONFIG.timings.revealHold);
 
@@ -526,22 +519,20 @@ document.addEventListener("DOMContentLoaded", () => {
     beginBtn.addEventListener("click", () => {
       beginBtn.disabled = true;
 
-      // UNLOCK birthday audio silently so modern browsers allow play later
+      // Force background buffering of birthday audio immediately on user click
       if (birthdayAudio) {
+        birthdayAudio.load();
         birthdayAudio.play().then(() => {
           birthdayAudio.pause();
           birthdayAudio.currentTime = 0;
         }).catch((e) => console.warn("Birthday unlock error:", e));
       }
 
-      // Start intro music
+      // Start intro audio
       if (introAudio) {
         introAudio.currentTime = 0;
         introAudio.volume = 0.75;
-        const playPromise = introAudio.play();
-        if (playPromise !== undefined) {
-          playPromise.catch((error) => console.warn("Intro audio start error:", error));
-        }
+        introAudio.play().catch((error) => console.warn("Intro audio start error:", error));
       }
 
       runExperience();
