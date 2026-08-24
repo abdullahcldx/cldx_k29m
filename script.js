@@ -265,9 +265,6 @@ const TERMINAL_SCRIPT = [
   { text: "", raw: true },
   { text: "Status:", cls: "terminal-text-dim" },
   { text: "SPECIAL PERSON ❤", cls: "terminal-text-gold", pauseAfter: 450 },
-  { text: "", raw: true },
-  { text: "Birthday Protocol:", cls: "terminal-text-dim" },
-  { text: "READY", cls: "terminal-text-purple", pauseAfter: 900 },
 ];
 
 async function typeText(el, text, speed) {
